@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">StudentHandbook</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="search">Search</string>
+    <string name="nav_bookmark">Bookmark</string>
+    <string name="nav_map">Map</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_profile">Profile</string>
+</resources>
