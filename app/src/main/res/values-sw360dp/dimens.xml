@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dimensions for small screens (360dp width and above) -->
+    <dimen name="activity_horizontal_margin">12dp</dimen>
+    <dimen name="nav_icon_spacing">12dp</dimen>
+</resources>
+
