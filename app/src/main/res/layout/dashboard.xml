@@ -287,7 +287,7 @@
 
                 <!-- Campus Map Card -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/"
+                    android:id="@+id/campusMap"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -1067,7 +1067,7 @@
 
                 <!-- Contact Us Card -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/"
+                    android:id="@+id/card_contact"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
