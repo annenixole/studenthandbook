@@ -11,8 +11,60 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentHandbook">
-
-        <!-- Splash Activity as launcher -->
+        <activity
+            android:name=".InstitutionalServices"
+            android:exported="false" />
+        <activity
+            android:name=".DownloadableForms"
+            android:exported="false" />
+        <activity
+            android:name=".StudentOrg"
+            android:exported="false" />
+        <activity
+            android:name=".StudentCouncil"
+            android:exported="false" />
+        <activity
+            android:name=".ExternalAffairs"
+            android:exported="false" />
+        <activity
+            android:name=".StudentAffairs"
+            android:exported="false" />
+        <activity
+            android:name=".StudentConduct"
+            android:exported="false" />
+        <activity
+            android:name=".ProgramOfferings"
+            android:exported="false" />
+        <activity
+            android:name=".CourseCurriculum"
+            android:exported="false" />
+        <activity
+            android:name=".GeneralProvisions"
+            android:exported="false" />
+        <activity
+            android:name=".DirectoryBulsu"
+            android:exported="false" />
+        <activity
+            android:name=".LocalAdminCouncil"
+            android:exported="false" />
+        <activity
+            android:name=".FacultyStaffAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".HymnMarch"
+            android:exported="false" />
+        <activity
+            android:name=".HistoryofBulsu"
+            android:exported="false" />
+        <activity
+            android:name=".ScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BookmarkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BulsuMapActivity"
+            android:exported="false" /> <!-- Splash Activity as launcher -->
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -22,13 +74,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Main Activity -->
+        </activity> <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>
