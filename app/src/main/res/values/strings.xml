@@ -6,4 +6,12 @@
     <string name="nav_map">Map</string>
     <string name="nav_home">Home</string>
     <string name="nav_profile">Profile</string>
+
+    <!-- Splash Screen Strings -->
+    <string name="app_title_splash">BulSU Bustos</string>
+    <string name="app_subtitle_splash">E-Handbook</string>
+    <string name="loading_handbook">Loading your handbook…</string>
+    <string name="splash_footer">Your comprehensive guide to university life.</string>
+    <string name="splash_background">Splash screen background</string>
+    <string name="bulsu_logo">BulSU Logo</string>
 </resources>

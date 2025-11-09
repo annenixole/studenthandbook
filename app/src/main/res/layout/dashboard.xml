@@ -285,9 +285,9 @@
                 android:paddingBottom="0dp"
                 android:weightSum="2">
 
-                <!-- Campus Map Card -->
+                <!--History of BulSu -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/"
+                    android:id="@+id/history_bulsu"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -310,7 +310,7 @@
                             android:layout_height="40dp"
                             android:contentDescription="Campus Map"
                             app:tint="#00562C"
-                            android:src="@android:drawable/ic_menu_recent_history" />
+                            android:src="@drawable/school"/>
 
                         <TextView
                             android:layout_width="0dp"
@@ -351,7 +351,7 @@
                             android:layout_height="40dp"
                             android:contentDescription="Contact Us"
                             app:tint="#00562C"
-                            android:src="@android:drawable/stat_notify_chat" />
+                            android:src="@drawable/playlist" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -418,14 +418,14 @@
                             android:layout_height="40dp"
                             android:contentDescription="Student Council"
                             app:tint="#00562C"
-                            android:src="@android:drawable/ic_menu_manage" />
+                            android:src="@drawable/staff" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
-                            android:text="Faculty and Staff"
+                            android:text="Faculty, Admin and Staff"
                             android:textColor="#00562C"
                             android:textSize="14sp"
                             android:textStyle="bold"
@@ -459,14 +459,14 @@
                             android:layout_height="40dp"
                             android:contentDescription="Student Affairs"
                             app:tint="#00562C"
-                            android:src="@android:drawable/ic_menu_agenda" />
+                            android:src="@drawable/university"/>
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
-                            android:text="Admin Council"
+                            android:text="Local Admin Council"
                             android:textColor="#00562C"
                             android:textSize="14sp"
                             android:textStyle="bold"
@@ -512,7 +512,7 @@
                             android:layout_height="40dp"
                             android:contentDescription="Library"
                             app:tint="#00562C"
-                            android:src="@android:drawable/ic_menu_sort_by_size" />
+                            android:src="@drawable/book" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -585,7 +585,7 @@
                             android:layout_height="40dp"
                             android:contentDescription="Scholarships"
                             app:tint="#00562C"
-                            android:src="@android:drawable/ic_menu_gallery" />
+                            android:src="@drawable/schedule" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -626,7 +626,7 @@
                             android:layout_height="40dp"
                             android:contentDescription="Financial Aid"
                             app:tint="#00562C"
-                            android:src="@android:drawable/ic_menu_report_image" />
+                            android:src="@drawable/curriculum" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -679,7 +679,7 @@
                             android:layout_height="40dp"
                             android:contentDescription="Academic Calendar"
                             app:tint="#00562C"
-                            android:src="@android:drawable/ic_menu_my_calendar" />
+                            android:src="@drawable/course"/>
 
                         <TextView
                             android:layout_width="0dp"
@@ -720,7 +720,7 @@
                             android:layout_height="40dp"
                             android:contentDescription="Events"
                             app:tint="#00562C"
-                            android:src="@android:drawable/ic_menu_today" />
+                            android:src="@drawable/law" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -787,14 +787,14 @@
                             android:layout_height="40dp"
                             android:contentDescription="Student Organizations"
                             app:tint="#00562C"
-                            android:src="@android:drawable/ic_menu_slideshow" />
+                            android:src="@drawable/staff" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
-                            android:text="Student Council"
+                            android:text="Student Conduct"
                             android:textColor="#00562C"
                             android:textSize="14sp"
                             android:textStyle="bold"
@@ -828,7 +828,7 @@
                             android:layout_height="40dp"
                             android:contentDescription="Campus Activities"
                             app:tint="#00562C"
-                            android:src="@android:drawable/ic_menu_compass" />
+                            android:src="@drawable/studentaffairs" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -881,7 +881,7 @@
                             android:layout_height="40dp"
                             android:contentDescription="Student Rights"
                             app:tint="#00562C"
-                            android:src="@android:drawable/ic_menu_preferences" />
+                            android:src="@drawable/externalaffair" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -922,7 +922,7 @@
                             android:layout_height="40dp"
                             android:contentDescription="Policies"
                             app:tint="#00562C"
-                            android:src="@android:drawable/ic_menu_info_details" />
+                            android:src="@drawable/council" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -976,7 +976,7 @@
                             android:layout_height="40dp"
                             android:contentDescription="Code of Conduct"
                             app:tint="#00562C"
-                            android:src="@android:drawable/ic_menu_view" />
+                            android:src="@drawable/organization" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -1049,7 +1049,7 @@
                             android:layout_height="40dp"
                             android:contentDescription="Campus Map"
                             app:tint="#00562C"
-                            android:src="@android:drawable/ic_dialog_map" />
+                            android:src="@drawable/downloads" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -1065,9 +1065,9 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- Contact Us Card -->
+                <!-- Institutional Services -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/"
+                    android:id="@+id/section_institutional_services"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -1090,7 +1090,7 @@
                             android:layout_height="40dp"
                             android:contentDescription="Contact Us"
                             app:tint="#00562C"
-                            android:src="@android:drawable/stat_notify_chat" />
+                            android:src="@drawable/services" />
 
                         <TextView
                             android:layout_width="0dp"
