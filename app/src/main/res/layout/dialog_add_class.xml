@@ -3,64 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
-
-    <EditText
-        android:id="@+id/etLocation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="e.g., Room 301"
-        android:inputType="text" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Day"
-        android:textSize="16sp"
-        android:layout_marginBottom="4dp" />
-
-    <Spinner
-        android:id="@+id/spinnerDay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Start Time"
-        android:textSize="16sp"
-        android:layout_marginBottom="4dp" />
-
-    <EditText
-        android:id="@+id/etStartTime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="e.g., 7:30"
-        android:inputType="text"
-        android:layout_marginBottom="16dp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="End Time"
-        android:textSize="16sp"
-        android:layout_marginBottom="4dp" />
-
-    <EditText
-        android:id="@+id/etEndTime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="e.g., 10:00"
-        android:inputType="text"
-        android:layout_marginBottom="16dp" />
+    android:padding="20dp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Course Name *"
         android:textSize="16sp"
-        android:layout_marginBottom="4dp" />
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="6dp" />
 
     <EditText
         android:id="@+id/etSubject"
@@ -68,20 +20,96 @@
         android:layout_height="wrap_content"
         android:hint="Enter course name"
         android:inputType="text"
+        android:padding="12dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
         android:layout_marginBottom="16dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Room"
+        android:text="Instructor"
         android:textSize="16sp"
-        android:layout_marginBottom="4dp" />
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="6dp" />
 
     <EditText
-        android:id="@+id/etLocation"
+        android:id="@+id/etInstructor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="e.g., Room 301"
-        android:inputType="text" />
+        android:hint="Enter instructor name"
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Day *"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="6dp" />
+
+    <Spinner
+        android:id="@+id/spinnerDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start Time *"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="6dp" />
+
+            <Spinner
+                android:id="@+id/spinnerStartTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="End Time *"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="6dp" />
+
+            <Spinner
+                android:id="@+id/spinnerEndTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp" />
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

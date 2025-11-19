@@ -7,17 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.viewpager2.widget.ViewPager2;
-
-import com.google.android.material.tabs.TabLayout;
-import com.google.android.material.tabs.TabLayoutMediator;
+import androidx.fragment.app.FragmentTransaction;
 
 public class ScheduleActivity extends AppCompatActivity {
-
-    private ViewPager2 viewPager;
-    private TabLayout tabLayout;
-    private ViewPagerAdapter adapter;
-    private String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,24 +22,11 @@ public class ScheduleActivity extends AppCompatActivity {
             return insets;
         });
 
-        viewPager = findViewById(R.id.viewPager);
-        tabLayout = findViewById(R.id.tabLayout);
-
-        adapter = new ViewPagerAdapter(this, days);
-        viewPager.setAdapter(adapter);
-
-        new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> {
-            if (position == 0) {
-                tab.setText("Weekly");
-            } else {
-                tab.setText(days[position - 1]);
-            }
-        }).attach();
-    }
-
-    public void navigateToTab(int position) {
-        if (viewPager != null && position >= 0 && position < adapter.getItemCount()) {
-            viewPager.setCurrentItem(position, true);
+        // Add WeeklyTimetableFragment directly
+        if (savedInstanceState == null) {
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, new WeeklyTimetableFragment());
+            transaction.commit();
         }
     }
 }

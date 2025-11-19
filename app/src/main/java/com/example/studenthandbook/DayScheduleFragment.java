@@ -25,6 +25,24 @@ public class DayScheduleFragment extends Fragment {
     private FloatingActionButton fabAdd;
     private List<ClassItem> classList;
     private String currentDay;
+    
+    // Available time options for spinners (30-minute intervals) - stored as 24-hour for matching
+    private final String[] timeOptions = {
+            "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30",
+            "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
+            "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30",
+            "19:00", "19:30", "20:00"
+    };
+    
+    // Display versions with AM/PM for spinners
+    private final String[] timeOptionsDisplay = {
+            "7:00 AM", "7:30 AM", "8:00 AM", "8:30 AM", "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM",
+            "11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM", "2:30 PM",
+            "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM", "5:00 PM", "5:30 PM", "6:00 PM", "6:30 PM",
+            "7:00 PM", "7:30 PM", "8:00 PM"
+    };
+    
+    private final String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 
     public static DayScheduleFragment newInstance(String day) {
         DayScheduleFragment fragment = new DayScheduleFragment();
@@ -66,16 +84,13 @@ public class DayScheduleFragment extends Fragment {
 
     private void setupRecyclerView() {
         // Fix: Create OnClassClickListener properly
-        DayScheduleAdapter.OnClassClickListener clickListener = new DayScheduleAdapter.OnClassClickListener() {
-            @Override
-            public void onClassClick(ClassItem classItem) {
-                showEditDeleteDialog(classItem);
-            }
-        };
+        DayScheduleAdapter.OnClassClickListener clickListener = classItem -> showEditDeleteDialog(classItem);
 
         adapter = new DayScheduleAdapter(classList, clickListener);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(adapter);
+        if (getContext() != null) {
+            recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+            recyclerView.setAdapter(adapter);
+        }
     }
 
     private void setupClickListeners() {
@@ -109,21 +124,28 @@ public class DayScheduleFragment extends Fragment {
     }
 
     private void showClassDialog(ClassItem classItem) {
+        if (getContext() == null) return;
+        
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         LayoutInflater inflater = requireActivity().getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.dialog_add_class, null);
 
         Spinner spinnerDay = dialogView.findViewById(R.id.spinnerDay);
-        EditText etStartTime = dialogView.findViewById(R.id.etStartTime);
-        EditText etEndTime = dialogView.findViewById(R.id.etEndTime);
+        Spinner spinnerStartTime = dialogView.findViewById(R.id.spinnerStartTime);
+        Spinner spinnerEndTime = dialogView.findViewById(R.id.spinnerEndTime);
         EditText etSubject = dialogView.findViewById(R.id.etSubject);
-        EditText etLocation = dialogView.findViewById(R.id.etLocation);
+        EditText etInstructor = dialogView.findViewById(R.id.etInstructor);
 
         // Set up day spinner
-        String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
         ArrayAdapter<String> dayAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, days);
         dayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerDay.setAdapter(dayAdapter);
+
+        // Setup time spinners with display format (AM/PM)
+        ArrayAdapter<String> timeAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, timeOptionsDisplay);
+        timeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerStartTime.setAdapter(timeAdapter);
+        spinnerEndTime.setAdapter(timeAdapter);
 
         // Pre-select current day for this fragment
         if (currentDay != null) {
@@ -143,42 +165,80 @@ public class DayScheduleFragment extends Fragment {
                     break;
                 }
             }
-            etStartTime.setText(classItem.getStartTime());
-            etEndTime.setText(classItem.getEndTime());
+            
+            int startIndex = findTimeOptionIndex(classItem.getStartTime());
+            int endIndex = findTimeOptionIndex(classItem.getEndTime());
+            if (startIndex != -1 && startIndex < timeOptionsDisplay.length) {
+                spinnerStartTime.setSelection(startIndex);
+            }
+            if (endIndex != -1 && endIndex < timeOptionsDisplay.length) {
+                spinnerEndTime.setSelection(endIndex);
+            }
+            
             etSubject.setText(classItem.getSubject());
-            etLocation.setText(classItem.getLocation());
+            etInstructor.setText(classItem.getInstructor() != null ? classItem.getInstructor() : "");
+        } else {
+            // Set default times (8:00 AM and 10:00 AM)
+            int defaultStartIndex = findTimeOptionIndex("8:00");
+            int defaultEndIndex = findTimeOptionIndex("10:00");
+            if (defaultStartIndex != -1 && defaultStartIndex < timeOptionsDisplay.length) {
+                spinnerStartTime.setSelection(defaultStartIndex);
+            }
+            if (defaultEndIndex != -1 && defaultEndIndex < timeOptionsDisplay.length) {
+                spinnerEndTime.setSelection(defaultEndIndex);
+            }
         }
 
         builder.setView(dialogView)
                 .setTitle(classItem == null ? "Add Class" : "Edit Class")
                 .setPositiveButton("Save", (dialog, which) -> {
                     String day = spinnerDay.getSelectedItem().toString();
-                    String startTime = etStartTime.getText().toString();
-                    String endTime = etEndTime.getText().toString();
-                    String subject = etSubject.getText().toString();
-                    String location = etLocation.getText().toString();
-
-                    if (!startTime.isEmpty() && !endTime.isEmpty() && !subject.isEmpty()) {
-                        if (classItem == null) {
-                            // Add new class
-                            ClassItem newClass = new ClassItem(day, startTime, endTime, subject, location);
-                            databaseHelper.addClass(newClass);
-                        } else {
-                            // Update existing class
-                            classItem.setDay(day);
-                            classItem.setStartTime(startTime);
-                            classItem.setEndTime(endTime);
-                            classItem.setSubject(subject);
-                            classItem.setLocation(location);
-                            databaseHelper.updateClass(classItem);
-                        }
-                        loadClasses();
-                    } else {
-                        Toast.makeText(getContext(), "Please fill all required fields", Toast.LENGTH_SHORT).show();
+                    // Convert display time back to 24-hour format for storage
+                    int startIdx = spinnerStartTime.getSelectedItemPosition();
+                    int endIdx = spinnerEndTime.getSelectedItemPosition();
+                    String startTime = timeOptions[startIdx]; // Use 24-hour format from timeOptions
+                    String endTime = timeOptions[endIdx]; // Use 24-hour format from timeOptions
+                    String subject = etSubject.getText().toString().trim();
+                    String instructor = etInstructor.getText().toString().trim();
+                    
+                    if (subject.isEmpty()) {
+                        Toast.makeText(getContext(), "Please enter course name", Toast.LENGTH_SHORT).show();
+                        return;
                     }
+                    
+                    if (endIdx <= startIdx) {
+                        Toast.makeText(getContext(), "End time must be after start time", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+                    if (classItem == null) {
+                        // Add new class
+                        ClassItem newClass = new ClassItem(day, startTime, endTime, subject, "");
+                        newClass.setInstructor(instructor);
+                        databaseHelper.addClass(newClass);
+                    } else {
+                        // Update existing class
+                        classItem.setDay(day);
+                        classItem.setStartTime(startTime);
+                        classItem.setEndTime(endTime);
+                        classItem.setSubject(subject);
+                        classItem.setInstructor(instructor);
+                        classItem.setLocation(""); // Remove location
+                        databaseHelper.updateClass(classItem);
+                    }
+                    loadClasses();
                 })
                 .setNegativeButton("Cancel", null)
                 .show();
+    }
+    
+    private int findTimeOptionIndex(String time) {
+        for (int i = 0; i < timeOptions.length; i++) {
+            if (timeOptions[i].equals(time)) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     private void deleteClass(ClassItem classItem) {

@@ -17,14 +17,45 @@
     <color name="light_gray">#FFE0E0E0</color>
 
     <color name="card_background">#FFFFFFFF</color>
-    <color name="background_gray">#FFF5F5F5</color>
-    <color name="text_primary">#FF2D2210</color>
-    <color name="text_secondary">#FF666666</color>
+    <color name="background_gray">#FFF8F9FA</color>
+    <color name="text_primary">#FF1A1A1A</color>
+    <color name="text_secondary">#FF6B7280</color>
 
-    <color name="primary_yellow">#FFEDBC33</color>
+    <color name="primary_yellow">#FFEAB308</color>
     <color name="primary_green">#FF00562C</color>
-    <color name="secondary_green">#FF02341C</color>
-    <color name="light_gray_gray">#FFB2B2B2</color>
+    <color name="secondary_green">#FF026D3C</color>
+    <color name="light_gray_gray">#FFE5E7EB</color>
     <color name="dark_brown">#FF2D2210</color>
+    
+    <!-- Modern UI Colors -->
+    <color name="surface_color">#FFFFFFFF</color>
+    <color name="surface_variant">#FFF1F5F9</color>
+    <color name="accent_green">#FF10B981</color>
+    <color name="card_shadow">#1A000000</color>
+    <color name="ripple_color">#2000562C</color>
+
+    <!-- Class Schedule Colors -->
+    <color name="class_color_1">#FFE8F5E9</color> <!-- Light Green -->
+    <color name="class_color_2">#FFE3F2FD</color> <!-- Light Blue -->
+    <color name="class_color_3">#FFF3E5F5</color> <!-- Light Purple -->
+    <color name="class_color_4">#FFFFF3E0</color> <!-- Light Orange -->
+    <color name="class_color_5">#FFE0F2F1</color> <!-- Light Teal -->
+    <color name="class_color_6">#FFFFEBEE</color> <!-- Light Pink -->
+    <color name="class_color_7">#FFF1F8E9</color> <!-- Light Lime -->
+    <color name="class_color_8">#FFE8EAF6</color> <!-- Light Indigo -->
+    <color name="class_color_9">#FFFFF9C4</color> <!-- Light Yellow -->
+    <color name="class_color_10">#FFECEFF1</color> <!-- Light Gray Blue -->
+
+    <!-- Class Schedule Text Colors -->
+    <color name="class_text_1">#FF1B5E20</color> <!-- Dark Green -->
+    <color name="class_text_2">#FF0D47A1</color> <!-- Dark Blue -->
+    <color name="class_text_3">#FF4A148C</color> <!-- Dark Purple -->
+    <color name="class_text_4">#FFE65100</color> <!-- Dark Orange -->
+    <color name="class_text_5">#FF004D40</color> <!-- Dark Teal -->
+    <color name="class_text_6">#FFB71C1C</color> <!-- Dark Red -->
+    <color name="class_text_7">#FF33691E</color> <!-- Dark Lime Green -->
+    <color name="class_text_8">#FF1A237E</color> <!-- Dark Indigo -->
+    <color name="class_text_9">#FFF57F17</color> <!-- Dark Yellow -->
+    <color name="class_text_10">#FF263238</color> <!-- Dark Gray Blue -->
 
 </resources>

@@ -193,9 +193,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="18dp"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="8dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="@color/surface_color"
         app:layout_constraintTop_toBottomOf="@id/app_bar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -206,8 +207,8 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:background="@color/white"
-            android:padding="8dp">
+            android:background="@color/surface_color"
+            android:padding="12dp">
 
             <!-- Search Icon -->
             <ImageView
@@ -218,7 +219,7 @@
                 android:layout_marginEnd="12dp"
                 android:contentDescription="@string/search"
                 android:src="@android:drawable/ic_menu_search"
-                app:tint="#757575" />
+                app:tint="@color/text_secondary" />
 
             <!-- Search EditText -->
             <EditText
@@ -231,11 +232,11 @@
                 android:hint="@string/search"
                 android:imeOptions="actionSearch"
                 android:inputType="text"
-                android:paddingTop="4dp"
-                android:paddingBottom="4dp"
-                android:textColor="#212121"
-                android:textColorHint="#9E9E9E"
-                android:textSize="12sp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"
+                android:textSize="14sp"
                 tools:ignore="TouchTargetSizeCheck" />
 
         </LinearLayout>
@@ -267,13 +268,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="About University"
-                android:textColor="#00562C"
-                android:textSize="18sp"
+                android:textColor="@color/primary_green"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="12dp"
-                android:paddingTop="16dp" />
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="14dp"
+                android:paddingTop="20dp"
+                android:letterSpacing="0.02" />
 
             <!-- Row 2: Campus Map & Contact Us -->
             <LinearLayout
@@ -291,9 +293,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_margin="6dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="3dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/surface_color"
                     android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
@@ -301,16 +304,18 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:background="@android:color/white"
-                        android:minHeight="80dp">
+                        android:padding="18dp"
+                        android:background="@color/surface_color"
+                        android:minHeight="90dp">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="Campus Map"
-                            app:tint="#00562C"
-                            android:src="@drawable/school"/>
+                            app:tint="@color/primary_green"
+                            android:src="@drawable/school"
+                            android:background="@color/surface_variant"
+                            android:padding="10dp"/>
 
                         <TextView
                             android:layout_width="0dp"
@@ -318,11 +323,12 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="History of BULSU"
-                            android:textColor="#00562C"
-                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
                             android:textStyle="bold"
                             android:maxLines="2"
-                            android:ellipsize="end" />
+                            android:ellipsize="end"
+                            android:lineSpacingExtra="2dp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -332,9 +338,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_margin="6dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="3dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/surface_color"
                     android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
@@ -342,16 +349,18 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:background="@android:color/white"
-                        android:minHeight="80dp">
+                        android:padding="18dp"
+                        android:background="@color/surface_color"
+                        android:minHeight="90dp">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="Contact Us"
-                            app:tint="#00562C"
-                            android:src="@drawable/playlist" />
+                            app:tint="@color/primary_green"
+                            android:src="@drawable/playlist"
+                            android:background="@color/surface_variant"
+                            android:padding="10dp" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -359,11 +368,12 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="Hymn and March"
-                            android:textColor="#00562C"
-                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
                             android:textStyle="bold"
                             android:maxLines="2"
-                            android:ellipsize="end" />
+                            android:ellipsize="end"
+                            android:lineSpacingExtra="2dp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -375,13 +385,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Administration and Staff"
-                android:textColor="#00562C"
-                android:textSize="18sp"
+                android:textColor="@color/primary_green"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="12dp"
-                android:paddingTop="16dp" />
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="14dp"
+                android:paddingTop="20dp"
+                android:letterSpacing="0.02" />
 
             <!-- Row 3: Student Council & Student Affairs -->
             <LinearLayout
@@ -399,9 +410,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_margin="6dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="3dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/surface_color"
                     android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
@@ -409,16 +421,18 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:background="@android:color/white"
-                        android:minHeight="80dp">
+                        android:padding="18dp"
+                        android:background="@color/surface_color"
+                        android:minHeight="90dp">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="Student Council"
-                            app:tint="#00562C"
-                            android:src="@drawable/staff" />
+                            app:tint="@color/primary_green"
+                            android:src="@drawable/staff"
+                            android:background="@color/surface_variant"
+                            android:padding="10dp" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -426,8 +440,9 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="Faculty, Admin and Staff"
-                            android:textColor="#00562C"
-                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:lineSpacingExtra="2dp"
                             android:textStyle="bold"
                             android:maxLines="2"
                             android:ellipsize="end" />
@@ -440,9 +455,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_margin="6dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="3dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/surface_color"
                     android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
@@ -450,16 +466,18 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:background="@android:color/white"
-                        android:minHeight="80dp">
+                        android:padding="18dp"
+                        android:background="@color/surface_color"
+                        android:minHeight="90dp">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="Student Affairs"
-                            app:tint="#00562C"
-                            android:src="@drawable/university"/>
+                            app:tint="@color/primary_green"
+                            android:src="@drawable/university"
+                            android:background="@color/surface_variant"
+                            android:padding="10dp"/>
 
                         <TextView
                             android:layout_width="0dp"
@@ -467,8 +485,9 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="Local Admin Council"
-                            android:textColor="#00562C"
-                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:lineSpacingExtra="2dp"
                             android:textStyle="bold"
                             android:maxLines="2"
                             android:ellipsize="end" />
@@ -493,9 +512,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_margin="6dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="3dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/surface_color"
                     android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
@@ -503,16 +523,18 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:background="@android:color/white"
-                        android:minHeight="80dp">
+                        android:padding="18dp"
+                        android:background="@color/surface_color"
+                        android:minHeight="90dp">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="Library"
-                            app:tint="#00562C"
-                            android:src="@drawable/book" />
+                            app:tint="@color/primary_green"
+                            android:src="@drawable/book"
+                            android:background="@color/surface_variant"
+                            android:padding="10dp" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -520,8 +542,9 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="Directory of BULSU"
-                            android:textColor="#00562C"
-                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:lineSpacingExtra="2dp"
                             android:textStyle="bold"
                             android:maxLines="2"
                             android:ellipsize="end" />
@@ -542,13 +565,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Academic Information"
-                android:textColor="#00562C"
-                android:textSize="18sp"
+                android:textColor="@color/primary_green"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="12dp"
-                android:paddingTop="16dp" />
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="14dp"
+                android:paddingTop="20dp"
+                android:letterSpacing="0.02" />
 
             <!-- Row 5: Scholarships & Financial Aid -->
             <LinearLayout
@@ -566,9 +590,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_margin="6dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="3dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/surface_color"
                     android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
@@ -576,16 +601,18 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:background="@android:color/white"
-                        android:minHeight="80dp">
+                        android:padding="18dp"
+                        android:background="@color/surface_color"
+                        android:minHeight="90dp">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="Scholarships"
-                            app:tint="#00562C"
-                            android:src="@drawable/schedule" />
+                            app:tint="@color/primary_green"
+                            android:src="@drawable/schedule"
+                            android:background="@color/surface_variant"
+                            android:padding="10dp" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -593,8 +620,9 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="General Provisions"
-                            android:textColor="#00562C"
-                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:lineSpacingExtra="2dp"
                             android:textStyle="bold"
                             android:maxLines="2"
                             android:ellipsize="end" />
@@ -607,9 +635,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_margin="6dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="3dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/surface_color"
                     android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
@@ -617,15 +646,15 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:background="@android:color/white"
-                        android:minHeight="80dp">
+                        android:padding="18dp"
+                        android:background="@color/surface_color"
+                        android:minHeight="90dp">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="Financial Aid"
-                            app:tint="#00562C"
+                            app:tint="@color/primary_green"
                             android:src="@drawable/curriculum" />
 
                         <TextView
@@ -634,8 +663,9 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="Course Curriculum"
-                            android:textColor="#00562C"
-                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:lineSpacingExtra="2dp"
                             android:textStyle="bold"
                             android:maxLines="2"
                             android:ellipsize="end" />
@@ -660,9 +690,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_margin="6dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="3dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/surface_color"
                     android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
@@ -670,15 +701,15 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:background="@android:color/white"
-                        android:minHeight="80dp">
+                        android:padding="18dp"
+                        android:background="@color/surface_color"
+                        android:minHeight="90dp">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="Academic Calendar"
-                            app:tint="#00562C"
+                            app:tint="@color/primary_green"
                             android:src="@drawable/course"/>
 
                         <TextView
@@ -687,8 +718,9 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="Program Offerings"
-                            android:textColor="#00562C"
-                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:lineSpacingExtra="2dp"
                             android:textStyle="bold"
                             android:maxLines="2"
                             android:ellipsize="end" />
@@ -701,9 +733,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_margin="6dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="3dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/surface_color"
                     android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
@@ -711,15 +744,15 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:background="@android:color/white"
-                        android:minHeight="80dp">
+                        android:padding="18dp"
+                        android:background="@color/surface_color"
+                        android:minHeight="90dp">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="Events"
-                            app:tint="#00562C"
+                            app:tint="@color/primary_green"
                             android:src="@drawable/law" />
 
                         <TextView
@@ -728,8 +761,9 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="Academic Regulations"
-                            android:textColor="#00562C"
-                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:lineSpacingExtra="2dp"
                             android:textStyle="bold"
                             android:maxLines="2"
                             android:ellipsize="end" />
@@ -744,13 +778,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Student Life and Governance"
-                android:textColor="#00562C"
-                android:textSize="18sp"
+                android:textColor="@color/primary_green"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="12dp"
-                android:paddingTop="16dp" />
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="14dp"
+                android:paddingTop="20dp"
+                android:letterSpacing="0.02" />
 
             <!-- Row 7: Student Organizations & Campus Activities -->
             <LinearLayout
@@ -768,9 +803,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_margin="6dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="3dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/surface_color"
                     android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
@@ -778,15 +814,15 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:background="@android:color/white"
-                        android:minHeight="80dp">
+                        android:padding="18dp"
+                        android:background="@color/surface_color"
+                        android:minHeight="90dp">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="Student Organizations"
-                            app:tint="#00562C"
+                            app:tint="@color/primary_green"
                             android:src="@drawable/staff" />
 
                         <TextView
@@ -795,8 +831,9 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="Student Conduct"
-                            android:textColor="#00562C"
-                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:lineSpacingExtra="2dp"
                             android:textStyle="bold"
                             android:maxLines="2"
                             android:ellipsize="end" />
@@ -809,9 +846,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_margin="6dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="3dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/surface_color"
                     android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
@@ -819,15 +857,15 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:background="@android:color/white"
-                        android:minHeight="80dp">
+                        android:padding="18dp"
+                        android:background="@color/surface_color"
+                        android:minHeight="90dp">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="Campus Activities"
-                            app:tint="#00562C"
+                            app:tint="@color/primary_green"
                             android:src="@drawable/studentaffairs" />
 
                         <TextView
@@ -836,8 +874,9 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="Student Affairs"
-                            android:textColor="#00562C"
-                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:lineSpacingExtra="2dp"
                             android:textStyle="bold"
                             android:maxLines="2"
                             android:ellipsize="end" />
@@ -862,9 +901,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_margin="6dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="3dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/surface_color"
                     android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
@@ -872,15 +912,15 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:background="@android:color/white"
-                        android:minHeight="80dp">
+                        android:padding="18dp"
+                        android:background="@color/surface_color"
+                        android:minHeight="90dp">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="Student Rights"
-                            app:tint="#00562C"
+                            app:tint="@color/primary_green"
                             android:src="@drawable/externalaffair" />
 
                         <TextView
@@ -889,8 +929,9 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="External Affairs"
-                            android:textColor="#00562C"
-                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:lineSpacingExtra="2dp"
                             android:textStyle="bold"
                             android:maxLines="2"
                             android:ellipsize="end" />
@@ -903,9 +944,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_margin="6dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="3dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/surface_color"
                     android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
@@ -913,15 +955,15 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:background="@android:color/white"
-                        android:minHeight="80dp">
+                        android:padding="18dp"
+                        android:background="@color/surface_color"
+                        android:minHeight="90dp">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="Policies"
-                            app:tint="#00562C"
+                            app:tint="@color/primary_green"
                             android:src="@drawable/council" />
 
                         <TextView
@@ -930,8 +972,9 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="Student Council"
-                            android:textColor="#00562C"
-                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:lineSpacingExtra="2dp"
                             android:textStyle="bold"
                             android:maxLines="2"
                             android:ellipsize="end" />
@@ -957,9 +1000,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_margin="6dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="3dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/surface_color"
                     android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
@@ -967,15 +1011,15 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:background="@android:color/white"
-                        android:minHeight="80dp">
+                        android:padding="18dp"
+                        android:background="@color/surface_color"
+                        android:minHeight="90dp">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="Code of Conduct"
-                            app:tint="#00562C"
+                            app:tint="@color/primary_green"
                             android:src="@drawable/organization" />
 
                         <TextView
@@ -984,8 +1028,9 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="Student Organizations"
-                            android:textColor="#00562C"
-                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:lineSpacingExtra="2dp"
                             android:textStyle="bold"
                             android:maxLines="2"
                             android:ellipsize="end" />
@@ -1006,13 +1051,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Institutional and Support Services"
-                android:textColor="#00562C"
-                android:textSize="18sp"
+                android:textColor="@color/primary_green"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="12dp"
-                android:paddingTop="16dp" />
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="14dp"
+                android:paddingTop="20dp"
+                android:letterSpacing="0.02" />
 
             <!-- Row 2: Campus Map & Contact Us -->
             <LinearLayout
@@ -1030,9 +1076,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_margin="6dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="3dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/surface_color"
                     android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
@@ -1040,15 +1087,15 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:background="@android:color/white"
-                        android:minHeight="80dp">
+                        android:padding="18dp"
+                        android:background="@color/surface_color"
+                        android:minHeight="90dp">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="Campus Map"
-                            app:tint="#00562C"
+                            app:tint="@color/primary_green"
                             android:src="@drawable/downloads" />
 
                         <TextView
@@ -1057,8 +1104,9 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="Downloadable Forms"
-                            android:textColor="#00562C"
-                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:lineSpacingExtra="2dp"
                             android:textStyle="bold"
                             android:maxLines="2"
                             android:ellipsize="end" />
@@ -1071,9 +1119,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_margin="6dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="3dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/surface_color"
                     android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
@@ -1081,15 +1130,15 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:background="@android:color/white"
-                        android:minHeight="80dp">
+                        android:padding="18dp"
+                        android:background="@color/surface_color"
+                        android:minHeight="90dp">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="Contact Us"
-                            app:tint="#00562C"
+                            app:tint="@color/primary_green"
                             android:src="@drawable/services" />
 
                         <TextView
@@ -1098,8 +1147,9 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="Institutional Services"
-                            android:textColor="#00562C"
-                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:lineSpacingExtra="2dp"
                             android:textStyle="bold"
                             android:maxLines="2"
                             android:ellipsize="end" />
