@@ -5,4 +5,26 @@
     <color name="bulsu_green">#00562C</color>
     <color name="progress_yellow">#F9A825</color>
     <color name="progress_background">#4DFFFFFF</color>
+
+
+
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="light_gray">#FFE0E0E0</color>
+
+    <color name="card_background">#FFFFFFFF</color>
+    <color name="background_gray">#FFF5F5F5</color>
+    <color name="text_primary">#FF2D2210</color>
+    <color name="text_secondary">#FF666666</color>
+
+    <color name="primary_yellow">#FFEDBC33</color>
+    <color name="primary_green">#FF00562C</color>
+    <color name="secondary_green">#FF02341C</color>
+    <color name="light_gray_gray">#FFB2B2B2</color>
+    <color name="dark_brown">#FF2D2210</color>
+
 </resources>

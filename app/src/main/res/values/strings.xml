@@ -14,4 +14,18 @@
     <string name="splash_footer">Your comprehensive guide to university life.</string>
     <string name="splash_background">Splash screen background</string>
     <string name="bulsu_logo">BulSU Logo</string>
+
+
+    <!-- Scheduler -->
+    <string-array name="days_array">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+
 </resources>
